@@ -20,6 +20,8 @@ function Ball(x, y, velX, velY, color, size) {
     this.velY = velY;
     this.color = color;
     this.size = size;
+    this.gravity = 2;
+    this.friction = 0;
 }
 
 Ball.prototype.draw = function() {
@@ -29,7 +31,8 @@ Ball.prototype.draw = function() {
     ctx.fill();
 }
 
-Ball.prototype.update = function() {
+Ball.prototype.update = function (time) {
+    time = time / 20
     if ((this.x + this.size) >= width) {
         this.velX = -(this.velX);
     }
@@ -40,15 +43,27 @@ Ball.prototype.update = function() {
 
     if ((this.y + this.size) >= height) {
         this.velY = -(this.velY);
+        this.gravity = 0;
+        this.friction = 10;
+    } else {
+        this.gravity = 2;
+        this.friction = 0;
     }
 
     if ((this.y) <= 0) {
         this.velY = -(this.velY);
     }
+    /*if (this.velX > 0) {
+        this.velX = Math.max(this.velX - this.friction * time, 0)
+    } else if (this.velX > 0) {
+        this.velX = Math.min(this.velX + this.friction * time, 0)
+    }*/
 
-    this.x += this.velX;
-    this.y += this.velY;
+    this.velY += this.gravity * time
+    this.x += this.velX * time;
+    this.y += this.velY * time;
 }
+
 
 let balls = [];
 
@@ -68,6 +83,10 @@ while (balls.length < 25) {
     balls.push(ball);
 }
 
+const time = {
+    start: performance.now()
+}
+
 function loop() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
     ctx.fillRect(0, 0, width, height);
@@ -75,9 +94,9 @@ function loop() {
     for (let i = 0; i < balls.length; i++) {
         balls[i].draw();
         balls[i].collisionDetect();
-        balls[i].update();
+        balls[i].update(performance.now() - time.start);
     }
-
+    time.start = performance.now()
     requestAnimationFrame(loop);
 }
 
