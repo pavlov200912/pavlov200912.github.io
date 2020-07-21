@@ -9,19 +9,17 @@ const height = canvas.height = window.innerHeight;
 // function to generate random number
 
 function random(min, max) {
-    const num = Math.floor(Math.random() * (max - min + 1)) + min;
+    const num = Math.random() * (max - min + 1) + min;
     return num;
 }
 
 function Ball(x, y, velX, velY, color, size) {
     this.x = x;
     this.y = y;
-    this.velX = velX;
-    this.velY = velY;
+    this.velX = velX / 5;
+    this.velY = velY / 5;
     this.color = color;
-    this.size = size;
-    this.gravity = 2;
-    this.friction = 0;
+    this.size = size
 }
 
 Ball.prototype.draw = function() {
@@ -43,40 +41,29 @@ Ball.prototype.update = function (time) {
 
     if ((this.y + this.size) >= height) {
         this.velY = -(this.velY);
-        this.gravity = 0;
-        this.friction = 10;
-    } else {
-        this.gravity = 2;
-        this.friction = 0;
     }
 
     if ((this.y) <= 0) {
         this.velY = -(this.velY);
     }
-    /*if (this.velX > 0) {
-        this.velX = Math.max(this.velX - this.friction * time, 0)
-    } else if (this.velX > 0) {
-        this.velX = Math.min(this.velX + this.friction * time, 0)
-    }*/
 
-    this.velY += this.gravity * time
-    this.x += this.velX * time;
-    this.y += this.velY * time;
+    this.x += this.velX;
+    this.y += this.velY;
 }
 
 
 let balls = [];
 
-while (balls.length < 25) {
-    let size = random(10,20);
+while (balls.length < 50) {
+    let size = 25;
     let ball = new Ball(
         // ball position always drawn at least one ball width
         // away from the edge of the canvas, to avoid drawing errors
-        random(0 + size,width - size),
-        random(0 + size,height - size),
-        random(-4,4),
-        random(-4,4),
-        'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+        random(size,width - size),
+        random(size,height - size),
+        random(-0.5,0.5),
+        random(-0.5,0.5),
+        'rgb(129, 156, 169)',
         size
     );
 
@@ -88,12 +75,12 @@ const time = {
 }
 
 function loop() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.fillStyle = 'rgb(41, 67, 78)';
     ctx.fillRect(0, 0, width, height);
 
     for (let i = 0; i < balls.length; i++) {
         balls[i].draw();
-        balls[i].collisionDetect();
+       // balls[i].collisionDetect();
         balls[i].update(performance.now() - time.start);
     }
     time.start = performance.now()
@@ -108,7 +95,7 @@ Ball.prototype.collisionDetect = function() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < this.size + balls[j].size) {
-                balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+             // ???
             }
         }
     }
