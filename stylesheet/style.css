@@ -1,0 +1,10 @@
+body {
+    background-color: gray;
+}
+
+p {
+    width: 10%;  /*Who?*/
+    margin: auto;
+    padding: 10%;
+    color: darkred;
+}
