@@ -79,6 +79,40 @@ matching; semigroups and monoids; convolutions and traverses; functors, applicat
 
 }
 
+subjects["Python Programming Language"] = (
+    "This course provides an introduction to the Python programming language, "
+    "with a focus on developing programming skills and understanding fundamental "
+    "principles of software development. Students will learn the syntax and semantics "
+    "of Python, with an emphasis on problem-solving, data structures, algorithms, "
+    "and object-oriented programming. Practical applications include file manipulation, "
+    "data analysis, and web development using popular Python libraries such as NumPy, "
+    "Pandas, and Flask. The course also covers the principles of software engineering "
+    "to prepare students for real-world programming tasks, including code version control, "
+    "testing, and debugging. By the end of the course, students will be capable of creating "
+    "complex, well-structured Python applications and will have a solid foundation for further "
+    "study in more specialized areas of software development."
+)
+
+subjects["Mathematical Logic in Computer Science"] = (
+    "This course introduces the fundamental concepts of mathematical logic as applied in computer science. "
+    "Students will explore propositional and predicate calculus, set theory, proof strategies, and model theory, "
+    "which form the basis for understanding logical reasoning and its role in computer algorithms and systems. "
+    "The course will cover logic programming using languages such as Prolog, the application of logic in computer "
+    "hardware and software verification, and the use of formal methods. Students will also learn about decidability, "
+    "computability, and the limits of algorithmic solutions. The coursework aims to equip students with the tools to "
+    "formulate and solve problems rigorously within a logical framework, a skill crucial for advanced study in computer science."
+)
+
+subjects["Algorithms for NP-hard Problems"] = (
+    "This advanced course delves into the design and analysis of algorithms for solving NP-hard problems, "
+    "which are known for their computational complexity. Students will learn about the theory of NP-completeness, "
+    "including the formal definition of complexity classes, reductions, and the Cook-Levin theorem. The course will "
+    "explore various approaches to tackling these challenging problems, such as approximation algorithms, heuristic methods, "
+    "randomized algorithms, and parameterized complexity. Practical sessions will include implementing algorithms for classic "
+    "NP-hard problems like the Traveling Salesman Problem, Knapsack Problem, and Graph Coloring. The course aims to build a "
+    "deep understanding of both the theoretical underpinnings and practical techniques for managing computationally intractable problems."
+)
+
 
 # Function to create HTML structure for each subject
 def create_subject_html(subject_name, description):
