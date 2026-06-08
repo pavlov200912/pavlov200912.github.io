@@ -1,21 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Ivan's website</title>
-<!--     <link rel="stylesheet" href="style.css"> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ivan Pavlov</title>
+  <meta name="description" content="Ivan Pavlov — MS Data Science student at EPFL, ML researcher interested in LLMs, mechanistic interpretability, and AI alignment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-    
-    <style>
-    .monospace {
-        font-family: "Lucida Console", Courier, monospace;
-    }
-
-    </style>
-
 <body>
-    <h1 class="monospace"> Pavlov Ivan's website </h1>
-    <p class="monospace"> I am ML Engineer @ JetBrains </p>
-    <p class="monospace"> Checkout my (old) CV <a href="https://www.dropbox.com/s/xp32ov1timlfett/Ivan_s_Resume.pdf?dl=0">here</a> </p>
+
+<nav>
+  <a class="name" href="#hero">Ivan Pavlov</a>
+  <ul>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section id="hero" style="border-top: none;">
+    <div class="hero-inner">
+      <!-- Replace photo.jpg with your actual photo file -->
+      <img src="photo.jpg" alt="Ivan Pavlov" class="hero-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="hero-photo-placeholder" style="display:none;">👤</div>
+
+      <div class="hero-text">
+        <h1>Ivan Pavlov</h1>
+        <p class="tagline">MS Data Science @ EPFL &nbsp;·&nbsp; ML Research &nbsp;·&nbsp; Lausanne, Switzerland</p>
+        <p class="bio">
+          I'm a master's student at EPFL (GPA 5.83/6.0) with a background in ML engineering at JetBrains and research internships at ETH Zurich and Oracle Labs. My current work focuses on <strong>mechanistic interpretability</strong> of LLMs — specifically understanding emergent misalignment in fine-tuned models. Broadly, I'm interested in LLMs, AI safety, and building reliable AI systems.
+        </p>
+        <div class="links">
+          <a class="link-btn primary" href="cv.pdf" target="_blank">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            CV / Résumé
+          </a>
+          <a class="link-btn" href="mailto:pavlov200912@gmail.com">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email
+          </a>
+          <a class="link-btn" href="https://linkedin.com/in/ivan-pavlov-ml" target="_blank">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="link-btn" href="https://github.com/pavlov200912" target="_blank">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Finding Explanations for Emergent Misalignment in LLMs</h3>
+        <span class="card-date">Feb 2026 – Present</span>
+      </div>
+      <p class="card-sub">Research Project Student · Learning &amp; Adaptive Systems (LAS) Group, ETH Zurich</p>
+      <ul>
+        <li>Evaluating mechanistic explanations for Emergent Misalignment in fine-tuned LLMs using linear probes, SAE features, and activation steering.</li>
+        <li>Supervised by Cynthia Xin Chen and Lukas Fluri (Prof. Andreas Krause / Prof. Florian Tramèr groups).</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">mechanistic interpretability</span>
+        <span class="tag">LLMs</span>
+        <span class="tag">AI safety</span>
+        <span class="tag">SAE</span>
+        <span class="tag">activation steering</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Post-training for SwissAI (Apertus): SFT → DPO</h3>
+        <span class="card-date">Feb 2025 – Jun 2025</span>
+      </div>
+      <p class="card-sub">Research Project Student · CLAIRE Lab, EPFL</p>
+      <ul>
+        <li>Reproduced the Tülu3 post-training pipeline on Llama 3.1 8B and adapted it to SwissAI <strong>Apertus</strong> (8B/70B): SFT followed by Direct Preference Optimization (DPO).</li>
+        <li>Identified that DPO degraded MMLU despite clean training metrics, surfacing a gap between optimization signal and downstream capability.</li>
+        <li>Extended evaluation infrastructure <a href="https://github.com/swiss-ai/olmes" target="_blank">olmes</a>: added vLLM inference with tensor parallelism, standard benchmarks (MMLU, GSM8K, HumanEval, IFEval, BBH, TruthfulQA, PopQA), and automated SLURM job generation.</li>
+        <li>Implemented and productionized a TRL/DeepSpeed-based DPO trainer in the <a href="https://github.com/swiss-ai/swiss-alignment" target="_blank">SwissAI codebase</a> with full W&amp;B logging.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">RLHF / DPO</span>
+        <span class="tag">SFT</span>
+        <span class="tag">Llama 3.1</span>
+        <span class="tag">vLLM</span>
+        <span class="tag">DeepSpeed</span>
+        <span class="tag">benchmarking</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Oracle Labs — Research Intern</h3>
+        <span class="card-date">Aug 2025 – Feb 2026</span>
+      </div>
+      <p class="card-sub">LLMs &amp; AI Agents for Schema Mapping · Zurich, Switzerland</p>
+      <ul>
+        <li>Built an LLM agent (tools-based architecture) for mapping external customer schemas to Oracle's internal schema, improving over the previous baseline.</li>
+        <li>Set up evaluation infrastructure for the associated RAG pipeline.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">LLM agents</span>
+        <span class="tag">RAG</span>
+        <span class="tag">schema mapping</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>JetBrains — ML Engineer</h3>
+        <span class="card-date">Sep 2022 – Sep 2024</span>
+      </div>
+      <p class="card-sub">JetBrains AI Team · Paphos, Cyprus</p>
+      <ul>
+        <li>Contributed to <strong>Mellum</strong> LLM and code completion system as part of the Evaluation team; owned A/B testing metrics, reporting, and data processing.</li>
+        <li>Developed a unified A/B testing pipeline across multiple languages and IDEs, enabling systematic comparison of completion models.</li>
+        <li>Trained and deployed CatBoost models for IDE search ranking, improving key ranking metrics by 15%.</li>
+        <li>Optimized metric/log collection algorithms for online experiments, reducing storage usage by 30%.</li>
+        <li>Implemented documentation generation and refactoring features in the JetBrains AI Assistant plugin.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">LLMs</span>
+        <span class="tag">A/B testing</span>
+        <span class="tag">CatBoost</span>
+        <span class="tag">code completion</span>
+        <span class="tag">IDE plugins</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Huawei Research — Junior ML Engineer</h3>
+        <span class="card-date">May 2022 – Aug 2022</span>
+      </div>
+      <p class="card-sub">ML Research Team · Saint Petersburg, Russia</p>
+      <ul>
+        <li>Designed a code-centric document retrieval system (DPR, RAG, Transformer encoders), doubling PR@1 over a strong ElasticSearch baseline for Python documentation search.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">DPR</span>
+        <span class="tag">RAG</span>
+        <span class="tag">information retrieval</span>
+        <span class="tag">transformers</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>JetBrains Research — Intern</h3>
+        <span class="card-date">Sep 2020 – May 2022</span>
+      </div>
+      <p class="card-sub">Machine Learning for Software Engineering Lab · Saint Petersburg, Russia</p>
+      <ul>
+        <li>Built an LSTM-based code-comment inconsistency detection plugin and a 4000+ Java project dataset, refined via a custom Toloka crowdsourcing and active learning pipeline.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">ML4SE</span>
+        <span class="tag">LSTM</span>
+        <span class="tag">active learning</span>
+        <span class="tag">crowdsourcing</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="edu-item">
+      <div class="edu-left">
+        <h3>EPFL — École Polytechnique Fédérale de Lausanne</h3>
+        <p class="degree">Master of Science in Data Science</p>
+        <p class="gpa">GPA 5.83 / 6.0</p>
+      </div>
+      <div class="edu-right">
+        Lausanne, Switzerland<br>Sep 2024 – Dec 2026
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-left">
+        <h3>Saint Petersburg State University</h3>
+        <p class="degree">Bachelor of Science in Computer Science, Faculty of Math and CS</p>
+        <p class="gpa">GPA 4.91 / 5.0 &nbsp;·&nbsp; <em>with honors</em></p>
+      </div>
+      <div class="edu-right">
+        Saint Petersburg, Russia<br>Sep 2018 – Jun 2022
+      </div>
+    </div>
+
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2>Teaching &amp; Volunteering</h2>
+
+    <div class="teach-item">
+      <span class="role"><strong>Teaching Assistant</strong> — Discrete Mathematics I, Neapolis University Pafos (Prof. A. Kulikov)</span>
+      <span class="period">Oct 2023 – Sep 2024</span>
+    </div>
+    <div class="teach-item">
+      <span class="role"><strong>Instructor</strong> — Olympiad Mathematics Club for Schoolchildren, Paphos, Cyprus</span>
+      <span class="period">Sep 2022 – May 2023</span>
+    </div>
+
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    Ivan Pavlov &nbsp;·&nbsp; <a href="mailto:pavlov200912@gmail.com" style="color: inherit;">pavlov200912@gmail.com</a> &nbsp;·&nbsp; Lausanne, Switzerland
+  </div>
+</footer>
+
 </body>
 </html>
